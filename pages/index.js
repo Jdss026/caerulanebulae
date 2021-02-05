@@ -1,5 +1,5 @@
 function Home() {
-    return <div>Home 6</div>
+    return <div>Jonas dos Santos - Site em construção</div>
 }
 
 export default Home
