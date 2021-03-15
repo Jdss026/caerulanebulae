@@ -2,6 +2,10 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 })
 
+module.exports = {
+  target: 'serverless'
+};
+
 module.exports = withBundleAnalyzer({
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],
   experimental: {
