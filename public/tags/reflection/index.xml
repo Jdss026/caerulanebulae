@@ -1,0 +1,24 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>Caerula Nebulae</title>
+      <link>https://caerulanebulae.xyz//blog</link>
+      <description>Apenas mais um blog.</description>
+      <language>pt-br</language>
+      <managingEditor>jdss026@gmail.com (Jonas Sousa)</managingEditor>
+      <webMaster>jdss026@gmail.com (Jonas Sousa)</webMaster>
+      <lastBuildDate>Wed, 15 Aug 2018 00:00:00 GMT</lastBuildDate>
+      <atom:link href="https://caerulanebulae.xyz//tags/reflection/index.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://caerulanebulae.xyz//blog/the-time-machine</guid>
+    <title>The Time Machine</title>
+    <link>https://caerulanebulae.xyz//blog/the-time-machine</link>
+    <description>The Time Traveller (for so it will be convenient to speak of him) was expounding a recondite matter to us. His pale grey eyes shone and twinkled, and his usually pale face was flushed and animated...</description>
+    <pubDate>Wed, 15 Aug 2018 00:00:00 GMT</pubDate>
+    <author>jdss026@gmail.com (Jonas Sousa)</author>
+    <category>writings</category><category>book</category><category>reflection</category>
+  </item>
+
+    </channel>
+  </rss>

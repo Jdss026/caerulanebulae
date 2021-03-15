@@ -1,0 +1,24 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>Caerula Nebulae</title>
+      <link>https://caerulanebulae.xyz//blog</link>
+      <description>Apenas mais um blog.</description>
+      <language>pt-br</language>
+      <managingEditor>jdss026@gmail.com (Jonas Sousa)</managingEditor>
+      <webMaster>jdss026@gmail.com (Jonas Sousa)</webMaster>
+      <lastBuildDate>Tue, 08 Mar 2016 00:00:00 GMT</lastBuildDate>
+      <atom:link href="https://caerulanebulae.xyz//tags/markdown/index.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://caerulanebulae.xyz//blog/code-sample</guid>
+    <title>Sample .md file</title>
+    <link>https://caerulanebulae.xyz//blog/code-sample</link>
+    <description>Example of a markdown file with code blocks and syntax highlighting</description>
+    <pubDate>Tue, 08 Mar 2016 00:00:00 GMT</pubDate>
+    <author>jdss026@gmail.com (Jonas Sousa)</author>
+    <category>markdown</category><category>code</category><category>features</category>
+  </item>
+
+    </channel>
+  </rss>
