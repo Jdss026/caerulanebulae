@@ -1,0 +1,18 @@
+{
+  "title": "Caerula Nebulae",
+  "author": "Jonas Sousa",
+  "headerTitle": "Caerula Nebulae",
+  "description": "Apenas mais um blog.",
+  "language": "pt-br",
+  "siteUrl": "https://caerulanebulae.xyz/",
+  "siteRepo": "https://github.com/timlrx/tailwind-nextjs-starter-blog",
+  "image": "/static/images/avatar.png",
+  "socialBanner": "/static/images/twitter-card.png",
+  "email": "jdss026@gmail.com",
+  "github": "https://github.com",
+  "twitter": "https://twitter.com/Twitter",
+  "facebook": "https://facebook.com",
+  "youtube": "https://youtube.com",
+  "linkedin": "https://www.linkedin.com",
+  "locale": "pt-BR"
+}
