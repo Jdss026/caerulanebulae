@@ -39,7 +39,7 @@ export default function Home({ posts }) {
                 <article>
                   <div className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
                     <dl>
-                      <dt className="sr-only">Published on</dt>
+                      <dt className="sr-only">Publicado em</dt>
                       <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                         <time dateTime={date}>
                           {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
@@ -71,7 +71,7 @@ export default function Home({ posts }) {
                         <Link
                           href={`/blog/${slug}`}
                           className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400"
-                          aria-label={`Read "${title}"`}
+                          aria-label={`Leia "${title}"`}
                         >
                           Leia mais &rarr;
                         </Link>
@@ -89,7 +89,7 @@ export default function Home({ posts }) {
           <Link
             href="/blog"
             className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400"
-            aria-label="all posts"
+            aria-label="todos os posts"
           >
             Todos os posts &rarr;
           </Link>
