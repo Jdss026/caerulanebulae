@@ -21,7 +21,7 @@ export default function ListLayout({ posts, title }) {
           </h1>
           <div className="relative max-w-lg">
             <input
-              aria-label="Search articles"
+              aria-label="Procurar posts"
               type="text"
               onChange={(e) => setSearchValue(e.target.value)}
               placeholder="Search articles"
@@ -54,7 +54,7 @@ export default function ListLayout({ posts, title }) {
                     <dt className="sr-only">Published on</dt>
                     <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                       <time dateTime={date}>
-                        {new Date(date).toLocaleDateString(siteMetdata.locale, postDateTemplate)}
+                        {new Date(String(date).replace('-','/')).toLocaleDateString(siteMetdata.locale, postDateTemplate)}
                       </time>
                     </dd>
                   </dl>

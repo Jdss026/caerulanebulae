@@ -42,7 +42,7 @@ export default function Home({ posts }) {
                       <dt className="sr-only">Publicado em</dt>
                       <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                         <time dateTime={date}>
-                          {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
+                          {new Date(String(date).replace('-','/')).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
                         </time>
                       </dd>
                     </dl>
