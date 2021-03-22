@@ -22,13 +22,14 @@ export default function Home({ posts }) {
         url={siteMetadata.siteUrl}
       />
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="pt-6 pb-8 space-y-2 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Recente
-          </h1>
-          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
+        <div className="pt-1 pb-8 space-y-2 md:space-y-5">
+          <p className="text-xl leading-7 text-gray-500 dark:text-gray-400">
             {siteMetadata.description}
           </p>
+          <p className="text-base font-bold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-6xl md:leading-14">
+            Recente
+          </p>
+          
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && 'No posts found.'}
