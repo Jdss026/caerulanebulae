@@ -122,7 +122,43 @@ $$
 
 O ponto de suspensão de um pêndulo de massa m e comprimento l pode mover-se horizontalmente ligado a duas molas idênticas de constante elástica k. (i) Escolhendo como coordenadas generalizadas o deslocamento x do ponto de suspensão e o ângulo $\theta$ entre o fio e a vertical, encontre a lagrangiana e as equações de movimento. (ii) Obtenha a forma aproximada das equações de Lagrange no caso de pequenas oscilações angulares ($sen \theta \approx\theta$, $cos \theta \approx 1$ e termos do tipo $\theta^n$ e $\dot\theta^2$ com n>1 são desprezíveis). Combinando as equações de movimento aproximadas, mostre que $x = \alpha\theta$ para um certo valor da constante $\alpha$. Mostre, em seguida, que o sistema equivale a um pendulo simples de comprimento $l'$ e exprima $l'$ em termos de l,m,g,k.
 
-![fig1-1.8](\static\images\mecanica\fig1-1.8.PNG)
+<center>
+<figure>
+    <Image alt="Problema 1.8" src="/static/images/mecanica/fig1-1.8.PNG" width={300} height={200} />
+    <figcaption> Problema 1.8 </figcaption>
+</figure>
+</center>
+(i) Escolhendo as coordenadas generalizadas o deslocamento x e ângulo do fio $\theta$, utilizamos um sistema de referência inercial em coordenadas cartesianas com origem no ponto de equilíbrio das molas, assim sendo com seu eixo-x orientado a direita da figura e o eixo-y orientado para baixo.
 
+Tratamos da representação de T e U neste sistema da seguinte forma: consideramos um pequeno deslocamento x do ponto de equilíbrio, causado por um desvio $\theta$ do pendulo conectado, a representação das coordenadas da posição massa m será definida por:
+$$
+X = x + l\cos{\theta}\\
+Y = l\sin{\theta}
+$$
+Considerando que a massa m está a uma distancia Y do potencial de referência, nulo, na origem, teremos a energia potencial $U_g$,
+$$
+U_g=mgl\cos{\theta}
+$$
+já para o caso da energia potencial elástica, devemos levar em conta dois fatos: sabemos que um deslocamento x no equilíbrio leva a uma força repulsiva devido a mola comprimida e uma força atrativa devido a mola alongada e que a força elástica é conservativa, i.e., deriva de um potencial. Somando a contribuição das duas, nos leva a:
+$$
+U_{el}=2\left(\frac{kx^2}{2}\right)=kx^2
+$$
+Agora resta por todas estas informações na lagrangiana, seguindo as contas,
+$$
+T=\frac{1}{2}m(\dot X^2 + \dot Y^2)\\
 
+\dot X^2 + \dot Y^2 = (\dot x+l \dot\theta cos\theta)^2+(-l \dot \theta sen \theta)^2=(\dot x^2+l^2\dot \theta^2cos^2\theta+2l\dot x \dot \theta cos \theta)+(l^2 \dot \theta^2 sen^2\theta)\\
+
+\dot X^2 + \dot Y^2 = (\dot x+l \dot\theta cos\theta)^2+(-l \dot \theta sen \theta)^2=\dot x^2+l^2\dot \theta^2+2l\dot x \dot \theta cos \theta\\
+
+T=\frac{1}{2}m(\dot x^2+l^2\dot \theta^2+2l\dot x \dot \theta cos \theta)\\
+$$
+
+$$
+U = kx^2+mglcos\theta \\
+
+L = T-U\\
+
+\boxed{L = \frac{1}{2}m(\dot x^2+l^2\dot \theta^2+2l\dot x \dot \theta cos \theta) - kx^2 - mglcos\theta}
+$$
 
