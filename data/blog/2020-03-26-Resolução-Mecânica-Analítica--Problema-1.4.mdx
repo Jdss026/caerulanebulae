@@ -1,0 +1,67 @@
+---
+title: 'Resolução "Mecânica Analítica" - Problema 1.4'
+date: '2021-03-26'
+lastmod: '2021-03-26'
+tags: ['mecânica analítica','1.4','lagrangiana','resolução']
+draft: false
+summary: 'Resolução "Mecânica Analítica" - Problema 1.4'
+images: []
+---
+
+**Problema 1.4 **
+
+O pêndulo cicloidal de Huyghens consiste numa partícula oscilando num plano vertical ao longo de um arco cicloide com equações paramétricas
+$$
+x = R\theta+R\text{sen}\theta\\y = -R\text{cos}\theta
+$$
+Mostre que a lagrangiana desse sistema pode ser posta na forma:
+$$
+L = 2mR^2cos^2\frac{\theta}{2}\dot{\theta}^2+mgRcos\theta
+$$
+fazendo a transformação de ponto $u=sen({\theta}/{2})$, obtenha a lagrangiana e a equação de Lagrange em termos da coordenada u. Prove que o período de oscilação é igual a $4\pi(R/g)^{1/2}$, independente, portanto, da amplitude $\theta_0$.
+
+**Resolução**
+
+Podemos descrever a Lagrangiana da partícula sujeita a restrição dada pelo arco cicloide como:
+$$
+L = T - U
+$$
+onde,
+$$
+T = \frac{1}{2}m(\dot{x}^2+\dot{y}^2)\\
+U = mgy
+$$
+descrevem a energia cinética e potencial do sistema, respectivamente, assim substituímos  as equações do cicloide nas equações acima
+
+
+$$
+\dot{x}^2=(R\dot{\theta}+R\dot{\theta}cos\theta)^2 = R^2\dot{\theta}^2+2R^2\dot{\theta}^2cos\theta+R^2\dot{\theta}^2cos^2\theta\\
+
+\dot{y}^2=(R\dot{\theta}sen\theta)^2=R^2\dot{\theta}^2sen^2\theta
+$$
+
+
+Escrevemos assim a expressão T,
+$$
+T = \frac{1}{2}m(R^2\dot{\theta}^2+2R^2\dot{\theta}^2cos\theta+R^2\dot{\theta}^2cos^2\theta+R^2\dot{\theta}^2sen^2\theta)\\
+T = \frac{1}{2}m(R^2\dot{\theta}^2+2R^2\dot{\theta}^2cos\theta+R^2\dot{\theta}^2)\\
+T = \frac{1}{2}m(2R^2\dot{\theta}^2cos\theta+2R^2\dot{\theta}^2)\\
+T = m(R^2\dot{\theta}^2(1+cos\theta))
+$$
+Utilizando da expressão do arco-metade,
+$$
+cos\frac{\theta}{2} = \pm\sqrt{\frac{1+cos\theta}{2}}
+$$
+teremos,
+$$
+T = 2mR^2\dot{\theta}^2cos^2\frac{\theta}{2}
+$$
+Faremos a substituição em U,
+$$
+U = mgy=-Rmg\cos{\theta}
+$$
+Logo, a lagrangiana pode ser escrita como se pede,
+$$
+L = T-U\\
+L =2mR^2\dot{\theta}^2cos^2\frac{\theta}{2}+Rmg\cos{\theta}
+$$
