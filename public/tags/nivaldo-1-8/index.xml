@@ -1,0 +1,24 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>Caerula Nebulae</title>
+      <link>https://caerulanebulae.xyz//blog</link>
+      <description>Física e afins.</description>
+      <language>pt-br</language>
+      <managingEditor>jdss026@gmail.com (Jonas Sousa)</managingEditor>
+      <webMaster>jdss026@gmail.com (Jonas Sousa)</webMaster>
+      <lastBuildDate>Fri, 26 Mar 2021 00:00:00 GMT</lastBuildDate>
+      <atom:link href="https://caerulanebulae.xyz//tags/nivaldo-1-8/index.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://caerulanebulae.xyz//blog/2020-03-26-Resolucao-Mecanica-Analitica-capitulo-1</guid>
+    <title>Resolução "Mecânica Analítica" - Capitulo 1</title>
+    <link>https://caerulanebulae.xyz//blog/2020-03-26-Resolucao-Mecanica-Analitica-capitulo-1</link>
+    <description>Resolução de problemas do capitulo 1 do livro "Mecânica Analítica" do Prof. Nivaldo Lemos</description>
+    <pubDate>Fri, 26 Mar 2021 00:00:00 GMT</pubDate>
+    <author>jdss026@gmail.com (Jonas Sousa)</author>
+    <category>mecânica analítica</category><category>nivaldo-1.4</category><category>nivaldo-1.8</category><category>lagrangiana</category><category>resolução</category>
+  </item>
+
+    </channel>
+  </rss>

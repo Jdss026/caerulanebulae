@@ -8,16 +8,16 @@
       <managingEditor>jdss026@gmail.com (Jonas Sousa)</managingEditor>
       <webMaster>jdss026@gmail.com (Jonas Sousa)</webMaster>
       <lastBuildDate>Sun, 06 Sep 2020 00:00:00 GMT</lastBuildDate>
-      <atom:link href="https://caerulanebulae.xyz//tags/notasdeandromeda/index.xml" rel="self" type="application/rss+xml"/>
+      <atom:link href="https://caerulanebulae.xyz//tags/latex/index.xml" rel="self" type="application/rss+xml"/>
       
   <item>
-    <guid>https://caerulanebulae.xyz//blog/primeira-postagem</guid>
-    <title>Primeira postagem no Blog!</title>
-    <link>https://caerulanebulae.xyz//blog/primeira-postagem</link>
-    <description>Primeira postagem.</description>
+    <guid>https://caerulanebulae.xyz//blog/testando-latex-no-blogger</guid>
+    <title>Testando $\LaTeX$ no Blogger</title>
+    <link>https://caerulanebulae.xyz//blog/testando-latex-no-blogger</link>
+    <description>Testando $\LaTeX$ no Blogger</description>
     <pubDate>Sun, 06 Sep 2020 00:00:00 GMT</pubDate>
     <author>jdss026@gmail.com (Jonas Sousa)</author>
-    <category>primeiro</category><category>notasdeandromeda</category>
+    <category>Latex</category>
   </item>
 
     </channel>
