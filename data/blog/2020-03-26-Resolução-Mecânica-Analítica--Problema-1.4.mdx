@@ -63,5 +63,58 @@ $$
 Logo, a lagrangiana pode ser escrita como se pede,
 $$
 L = T-U\\
-L =2mR^2\dot{\theta}^2cos^2\frac{\theta}{2}+Rmg\cos{\theta}
+\boxed{L =2mR^2\dot{\theta}^2cos^2\frac{\theta}{2}+Rmg\cos{\theta}}
+$$
+
+Agora partimos para a transformada de $\theta \rightarrow u$ através de $u=\sin({\theta/2})$, a transformação de $cos^2(\theta/2)$ é bem fácil através da conhecida identidade
+$$
+cos^2(\theta/2)={1-sen^2(\theta/2)} = {1-u^2}
+$$
+agora tratamos de $cos\theta$, sabendo da relação de arco-metade, agora utilizando $sen(\theta/2)$
+$$
+sen\left(\frac{\theta}{2}\right) = \pm\sqrt{\frac{1-cos\theta}{2}}\\
+2sen^2\left(\frac{\theta}{2}\right)=1-cos\theta\\
+1-2u^2=cos\theta
+$$
+e finalmente do $\dot{\theta}$
+$$
+\dot{u}=\frac{\dot{\theta}}{2}cos\left(\frac{\theta}{2}\right)\\
+2\dot{u}=\dot{\theta}cos\left(\frac{\theta}{2}\right) = \dot{\theta}\sqrt{{1-u^2}}\\
+\dot{\theta}=\frac{2\dot{u}}{\sqrt{{1-u^2}}}
+$$
+
+
+Substituindo nossos achados na lagrangiana,
+$$
+L = 2mR^2\dot{\theta}^2cos^2\left(\frac{\theta}{2}\right)+Rmg\cos{\theta}\\
+{L = 2mR^2\left({\frac{2\dot{u}}{\sqrt{{1-u^2}}}}\right)^2({1-u^2})+Rmg(1-2u^2)}\\
+\boxed{L = 8mR^2\dot{u}^2+Rmg(1-2u^2)}
+$$
+Determinamos assim a equação de Lagrange,
+$$
+\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{u}}\right)-\frac{\partial L}{\partial u} = 0
+$$
+Assim derivamos,
+$$
+\frac{\partial L}{\partial \dot{u}} = \frac{\partial}{\partial \dot{u}}(8mR^2\dot{u}^2+Rmg(1-2u^2))=16mR^2\dot{u}\\
+
+\frac{\partial L}{\partial u} = \frac{\partial}{\partial u}(8mR^2\dot{u}^2+Rmg(1-2u^2)) = -4Rmgu\\
+
+\frac{d}{dt}\left(16mR^2\dot{u}\right) = 16mR^2\ddot{u}
+$$
+E a equação de Lagrange vira
+$$
+16mR^2\ddot{u}+4Rmgu=0
+$$
+simplificando,
+$$
+4R\ddot{u}+gu=0\\
+
+\ddot{u}+\left(\frac{g}{4R}\right)u=0\\
+$$
+Observamos que a ultima equação é a equação diferencial que descreve um oscilador harmônico, com frequência angular $\omega^2 = g/4R$. Lembrando que a relação entre frequência e período do movimento oscilatório é $\omega = 2\pi/T$, buscaremos o período desse movimento
+$$
+\omega = \frac{2\pi}{T} \Rightarrow T=\frac{2\pi}{\omega}=\frac{2\pi}{\sqrt{\frac{g}{4R}}} \\
+
+\boxed{T = 4\pi \sqrt{\frac{R}{g}}}
 $$
