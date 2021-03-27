@@ -130,16 +130,16 @@ O ponto de suspensão de um pêndulo de massa m e comprimento l pode mover-se ho
 </center>
 ## Resolução
 
-(i) Escolhendo as coordenadas generalizadas o deslocamento x e ângulo do fio $\theta$, utilizamos um sistema de referência inercial em coordenadas cartesianas com origem no ponto de equilíbrio das molas, assim sendo com seu eixo-x orientado a direita da figura e o eixo-y orientado para baixo.
+(i) Escolhendo as coordenadas generalizadas o deslocamento x e ângulo do fio $\theta$, utilizamos um sistema de referência inercial em coordenadas cartesianas com origem no ponto de equilíbrio das molas, assim sendo com seu eixo-x orientado a direita da figura e o eixo-y orientado para cima.
 
-Tratamos da representação de T e U neste sistema da seguinte forma: consideramos um pequeno deslocamento x do ponto de equilíbrio, causado por um desvio $\theta$ do pendulo conectado, a representação das coordenadas da posição massa m será definida por:
+Tratamos da representação de T e V neste sistema da seguinte forma: consideramos um pequeno deslocamento x do ponto de equilíbrio, causado por um desvio $\theta$ do pendulo conectado, a representação das coordenadas da posição massa m será definida por:
 $$
-X = x + l\cos{\theta}\\
-Y = l\sin{\theta}
+X = x + l\sin{\theta}\\
+Y = l\cos{\theta},
 $$
 Considerando que a massa m está a uma distancia Y do potencial de referência, nulo, na origem, teremos a energia potencial $U_g$,
 $$
-U_g=mgl\cos{\theta}
+U_g=-mgl\cos{\theta}
 $$
 já para o caso da energia potencial elástica, devemos levar em conta dois fatos: sabemos que um deslocamento x no equilíbrio leva a uma força repulsiva devido a mola comprimida e uma força atrativa devido a mola alongada e que a força elástica é conservativa, i.e., deriva de um potencial. Somando a contribuição das duas, nos leva a:
 $$
@@ -160,11 +160,11 @@ T&=\frac{1}{2}m(\dot x^2+l^2\dot \theta^2+2l\dot x \dot \theta cos \theta)\\
 $$
 
 $$
-U = kx^2+mglcos\theta \\ 
+V = kx^2+mglcos\theta \\ 
 
-L = T-U\\
+L = T-V\\
 
-\boxed{L = \frac{1}{2}m(\dot x^2+l^2\dot \theta^2+2l\dot x \dot \theta cos \theta) - kx^2 - mglcos\theta}
+\boxed{L = \frac{1}{2}m(\dot x^2+l^2\dot \theta^2+2l\dot x \dot \theta cos \theta) - kx^2 + mglcos\theta}
 $$
 
 Utilizando as equações de Lagrange:
@@ -175,25 +175,25 @@ $$
 \frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\theta}}\right)-\frac{\partial L}{\partial \theta} &= 0
 \end{aligned}
 $$
-obtemos as derivadas parciais em $ x ~~ \text{e} ~~ \theta$:
+obtemos as derivadas parciais em $x$ e  $\theta$:
 $$
 \begin{aligned}
 
 \frac{\partial L}{\partial \dot{x}} &= m(\dot x+l \dot \theta cos \theta) & \frac{\partial L}{\partial \dot \theta} &= m(l^2\dot \theta+l\dot x cos \theta)\\
 
-\frac{\partial L}{\partial x} &= -mkx & \frac{\partial L}{\partial \theta} &= ml\dot \theta sen\theta(-\dot \theta \dot x+g)\\
+\frac{\partial L}{\partial x} &= -2kx & \frac{\partial L}{\partial \theta} &= -ml\dot x \dot \theta sen \theta - mglsen \theta = mlsen \theta(-\dot x \dot \theta - g)\\
 
 \end{aligned}
 $$
-Aplicamos as derivadas nas equações de lagrange em x,
+Aplicamos as derivadas nas equações de Lagrange em x,
 $$
 \frac{d}{dt}\left(\frac{\partial L}{\partial \dot{x}}\right)-\frac{\partial L}{\partial x} = 0 \\
 
-\frac{d}{dt}\left(m(\dot x+l \dot \theta cos \theta)\right) + mkx = 0 \\
+\frac{d}{dt}\left(m(\dot x+l \dot \theta cos \theta)\right) + 2kx = 0 \\
 
-m\left(\ddot x+l \ddot \theta cos \theta - l\dot \theta^2 sen \theta\right) + mkx = 0 \\
+m\left(\ddot x+l \ddot \theta cos \theta - l\dot \theta^2 sen \theta\right) + 2kx = 0 \\
 
-\ddot x+l \ddot \theta cos \theta - l\dot \theta^2 sen \theta + kx = 0
+\boxed{m(\ddot x+l \ddot \theta cos \theta - l\dot \theta^2 sen \theta) + 2kx = 0}
 $$
 
 
@@ -201,7 +201,87 @@ e em $\theta$,
 
 
 $$
+\begin{aligned}
 \frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\theta}}\right)-\frac{\partial L}{\partial \theta} = 0 \\
 
-m\frac{d}{dt}\left(l^2 \dot \theta+l\dot x cos \theta \right)-ml\dot \theta sen\theta(-\dot \theta \dot x+g) = 0 \\
+m\frac{d}{dt}\left(l^2 \dot \theta+l\dot x cos \theta \right)-ml sen\theta(-\dot \theta \dot x-g) = 0 \\
+
+m\left(l^2 \ddot \theta+l\ddot x cos \theta -l\dot x \dot \theta sen \theta \right)+ml sen\theta(\dot \theta \dot x+g) = 0 \\
+
+\boxed{l^2 \ddot \theta+l\ddot x cos \theta -l\dot x \dot \theta sen \theta +l sen\theta(\dot \theta \dot x+g) = 0 }
+
+\end{aligned}
+$$
+
+Chegamos as equações de movimento do sistema.
+
+(ii) Iremos obter a forma aproximada das equações de Lagrange no caso de pequenas oscilações angulares ($sen \theta \approx\theta$, $cos \theta \approx 1$ e termos do tipo $\theta^n$ e $\dot\theta^n$ com n>1 são desprezíveis),
+
+
+
+Iremos impor as aproximações acima nas equações de movimento, resultando em
+
+
+$$
+\begin{aligned}
+m(\ddot x+l \ddot \theta cos \theta - l\dot \theta^2 sen \theta) + 2kx = 0 \\
+
+l^2 \ddot \theta+l\ddot x cos \theta -l\dot x \dot \theta sen \theta +l sen\theta(\dot \theta \dot x+g) = 0
+
+\end{aligned}
+$$
+
+$$
+m(\ddot x+l \ddot \theta \underbrace{cos \theta}_{\approx 1} - l\underbrace{\dot \theta^2}_{\approx0} sen \theta) + 2kx = 0 \\
+
+\boxed{m(\ddot x+l \ddot \theta) + 2kx = 0}
+$$
+
+$$
+l^2 \ddot \theta+l\ddot x \underbrace{cos \theta}_{\approx 1} -l\dot x \dot \theta \underbrace{sen \theta}_{\approx \theta} +ml \underbrace{sen \theta}_{\approx \theta}(\dot \theta \dot x+g) = 0 \\
+
+l^2 \ddot \theta+l\ddot x -l\dot x \dot \theta \theta +l \theta(\dot \theta \dot x+g) = 0 \\
+
+l \ddot \theta+ \ddot x -\dot x \dot \theta \theta + \theta \dot \theta \dot x + \theta g = 0 \\
+
+\boxed{l \ddot \theta+ \ddot x  + \theta g = 0} \\
+$$
+
+Agora combinamos as equações para obter um $x = \alpha \theta$
+$$
+\begin{aligned}
+m \ddot x + ml \ddot \theta + 2kx = 0 \\
+l \ddot \theta+ \ddot x  + \theta g = 0
+\end{aligned}
+$$
+Dividindo a primeira por m
+$$
+\begin{aligned}
+\ddot x + l \ddot \theta + \frac{2k}{m}x &= 0 \\
+l \ddot \theta+ \ddot x  + \theta g &= 0
+\end{aligned}
+$$
+Subtraindo as duas membro a membro
+$$
+\begin{aligned}
+\frac{2k}{m}x - \theta g &= 0 \Rightarrow x = \frac{mg}{2k}\theta \\
+
+\therefore  \boxed{\alpha = \frac{mg}{2k}}
+\end{aligned}
+$$
+Buscamos agora o comprimento $l'$ em termos de $l, m, g, k$. Tomamos a segunda equação e dividindo por l, temos
+$$
+\ddot \theta+ \frac{\ddot x}{l}  + \frac{\theta}{l}g = 0
+$$
+Substituímos pela quantidade $\ddot x = \frac{mg}{2k}\ddot \theta$,
+$$
+\ddot \theta+ \frac{mg}{2kl}\ddot \theta  + \frac{\theta}{l}g = 0 \\
+
+\left(1+ \frac{mg}{2kl}\right)\ddot \theta  + \frac{\theta}{l}g = 0 \\
+
+\ddot \theta  + \frac{g}{\left(l+\frac{mg}{2k}\right)}\theta = 0 \\
+$$
+ A equação acima descreve o movimento do pendulo simples de comprimento
+$$
+\boxed{l^{'} = l+\frac{mg}{2k}}
 $$
