@@ -120,7 +120,7 @@ $$
 $$
 **Problema 1.8**
 
-O ponto de suspensão de um pêndulo de massa m e comprimento l pode mover-se horizontalmente ligado a duas molas idênticas de constante elástica k. (i) Escolhendo como coordenadas generalizadas o deslocamento x do ponto de suspensão e o ângulo $\theta$ entre o fio e a vertical, encontre a lagrangiana e as equações de movimento. (ii) Obtenha a forma aproximada das equações de Lagrange no caso de pequenas oscilações angulares ($sen \theta \approx\theta$, $cos \theta \approx 1$ e termos do tipo $\theta^n$ e $\dot\theta^2$ com n>1 são desprezíveis). Combinando as equações de movimento aproximadas, mostre que $x = \alpha\theta$ para um certo valor da constante $\alpha$. Mostre, em seguida, que o sistema equivale a um pendulo simples de comprimento $l'$ e exprima $l'$ em termos de l,m,g,k.
+O ponto de suspensão de um pêndulo de massa m e comprimento l pode mover-se horizontalmente ligado a duas molas idênticas de constante elástica k. (i) Escolhendo como coordenadas generalizadas o deslocamento x do ponto de suspensão e o ângulo $\theta$ entre o fio e a vertical, encontre a lagrangiana e as equações de movimento. (ii) Obtenha a forma aproximada das equações de Lagrange no caso de pequenas oscilações angulares ($sen \theta \approx\theta$, $cos \theta \approx 1$ e termos do tipo $\theta^n$ e $\dot\theta^n$ com n>1 são desprezíveis). Combinando as equações de movimento aproximadas, mostre que $x = \alpha\theta$ para um certo valor da constante $\alpha$. Mostre, em seguida, que o sistema equivale a um pendulo simples de comprimento $l'$ e exprima $l'$ em termos de l,m,g,k.
 
 <center>
 <figure>
@@ -165,3 +165,41 @@ L = T-U\\
 \boxed{L = \frac{1}{2}m(\dot x^2+l^2\dot \theta^2+2l\dot x \dot \theta cos \theta) - kx^2 - mglcos\theta}
 $$
 
+Utilizando as equações de Lagrange:
+$$
+\begin{aligned}
+\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{x}}\right)-\frac{\partial L}{\partial x} &= 0 \\
+
+\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\theta}}\right)-\frac{\partial L}{\partial \theta} &= 0
+\end{aligned}
+$$
+obtemos as derivadas parciais em $ x ~~ \text{e} ~~ \theta$:
+$$
+\begin{aligned}
+
+\frac{\partial L}{\partial \dot{x}} &= m(\dot x+l \dot \theta cos \theta) & \frac{\partial L}{\partial \dot \theta} &= m(l^2\dot \theta+l\dot x cos \theta)\\
+
+\frac{\partial L}{\partial x} &= -mkx & \frac{\partial L}{\partial \theta} &= ml\dot \theta sen\theta(-\dot \theta \dot x+g)\\
+
+\end{aligned}
+$$
+Aplicamos as derivadas nas equações de lagrange em x,
+$$
+\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{x}}\right)-\frac{\partial L}{\partial x} = 0 \\
+
+\frac{d}{dt}\left(m(\dot x+l \dot \theta cos \theta)\right) + mkx = 0 \\
+
+m\left(\ddot x+l \ddot \theta cos \theta - l\dot \theta^2 sen \theta\right) + mkx = 0 \\
+
+\ddot x+l \ddot \theta cos \theta - l\dot \theta^2 sen \theta + kx = 0
+$$
+
+
+e em $\theta$,
+
+
+$$
+\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\theta}}\right)-\frac{\partial L}{\partial \theta} = 0 \\
+
+m\frac{d}{dt}\left(l^2 \dot \theta+l\dot x cos \theta \right)-ml\dot \theta sen\theta(-\dot \theta \dot x+g) = 0 \\
+$$
