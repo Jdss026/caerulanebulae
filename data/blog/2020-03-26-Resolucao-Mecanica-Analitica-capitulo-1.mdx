@@ -1,12 +1,83 @@
 ---
 title: 'Resolução "Mecânica Analítica" - Capitulo 1'
 date: '2021-03-26'
-lastmod: '2021-03-26'
-tags: ['mecânica analítica','nivaldo-1.4','nivaldo-1.8','lagrangiana','resolução']
+lastmod: '2021-03-28'
+tags: ['mecânica analítica','nivaldo-1.4','nivaldo-1.8','nivaldo-1.2','nivaldo-1.10','lagrangiana','resolução']
 draft: false
 summary: 'Resolução de problemas do capitulo 1 do livro "Mecânica Analítica" do Prof. Nivaldo Lemos'
 images: []
 ---
+
+# Problema 1.2
+
+Uma conta(partícula) de massa m desliza sem atrito ao longo de uma haste rígida, de massa desprezível, que gira um plano horizontal com velocidade angular constante $\omega$. Mostre que, com uma escolha adequada da coordenada r, a lagrangiana do sistema é 
+$$
+L = \frac{m}{2} \dot r^2+\frac{m\omega^2}{2}r^2-mgr sen \omega t
+$$
+Dadas as condições iniciais $r(0)=r_0$ e $\dot r(0) = 0$, encontre a solução da equação de Lagrange para r.
+
+[ESTOU DEVENDO IMAGEM]
+
+## Resolução
+
+Observamos da figura que as coordenadas da partícula de massa m são
+$$
+\begin{aligned}
+x = r \cos(\omega t) && y=r\sin(\omega t)
+\end{aligned}
+$$
+Assim sua energia cinética é escrita como
+$$
+\begin{aligned}
+T &= \frac{1}{2}m(\dot x^2+\dot y^2)\\
+\dot x^2 &= (\dot r cos (\omega t) - r \omega sen (\omega t))^2 \\  
+\dot y^2 &= (\dot r sen (\omega t) + r \omega cos (\omega t))^2
+\end{aligned}
+$$
+Abrimos as contas da quantidade T
+$$
+\begin{aligned}
+\dot x^2 = (\dot r^2cos^2(\omega t)-2r\dot r \omega cos(\omega)sen(\omega t)+r^2 \omega^2 sen^2(\omega t))\\
+\dot y^2 = (\dot r ^2 sen ^2 (\omega t)+2r \dot r \omega sen (\omega t) cos (\omega t)+r^2\omega^2 cos^2(\omega t))\\
+\end{aligned}
+$$
+assim
+$$
+T = \frac{1}{2}m(\dot r^2+r^2 \omega^2)
+$$
+A energia potencial será
+$$
+V = mgr sen \theta
+$$
+A lagrangiana será então
+$$
+L = T-V
+$$
+
+$$
+L = \frac{1}{2}m(\dot r^2+r^2 \omega^2)-mgr sen (\omega t)
+$$
+
+As equações do movimento serão então dadas por
+$$
+\frac{d}{dt}\left(\frac{\partial L}{\partial \dot r} \right) - \frac{\partial L}{\partial r} = 0
+$$
+Faremos as derivadas pedidas separadamente 
+$$
+\begin{aligned}
+\frac{\partial L}{\partial \dot r} &= m \dot r && \frac{\partial L}{\partial r}=mr \omega^2 -mgsen(\omega t)\\
+\frac{d}{dt}(m\dot r)&=m\ddot r
+\end{aligned}
+$$
+Chegamos assim na equação do movimento
+$$
+m\ddot r-(mr \omega^2-mg sen (\omega t))=0\\
+
+\ddot r - r \omega^2 + g sen (\omega t)=0
+$$
+que tem a forma de uma ED linear ordinária de segunda ordem não homogênea. Descobrir a equação horária r(t) é portanto resolver esta EDO com as condições iniciais impostas $r(0)=r_0$ e $\dot r(0) = 0$.
+
+
 
 # Problema 1.4
 
@@ -284,4 +355,46 @@ $$
  A equação acima descreve o movimento do pendulo simples de comprimento
 $$
 \boxed{l^{'} = l+\frac{mg}{2k}}
+$$
+
+# Problema 1.10
+
+Um pêndulo elástico numa massa m capaz de oscilar num plano vertical suspensa por uma mola de constante elástica k e comprimento natural l. Escolhendo coordenadas generalizadas convenientes, obtenha a lagrangiana e as equações de lagrange.
+
+
+
+[IMAGEM 1.10]
+
+
+
+## Resolução
+
+Descrevemos a origem no ponto de suporte do pêndulo, e direcionamos o par de eixos do sistema de referencia com o eixo-x para a direita e o eixo-y para baixo. Definimos as coordenadas generalizadas como d e $\theta$ , sendo d o comprimento da mola e $\theta $ o ângulo com a vertical. A particula de massa m é descrita pelo par (x,y), onde teremos a sua energia cinética e potencial da seguinte forma
+$$
+T = \frac{1}{2}m(\dot x^2+\dot y^2) \\
+V = -mgdsen\theta \\
+$$
+Derivamos x e y:
+$$
+\begin{aligned}
+x &= dsen\theta\\
+y &=dcos\theta \\
+\dot x^2 &= (\dot d sen \theta + d \dot \theta cos \theta)^2 \\
+\dot x^2 &= (\dot d ^2 sen^2 \theta + 2\dot d d \dot \theta sen \theta cos \theta + d^2 \dot \theta^2 cos ^2\theta)\\
+\dot y^2 &= (\dot d cos \theta - d \dot \theta sen \theta) ^2 \\
+\dot y^2 &= \dot d^2 cos^2 \theta - 2\dot d d \dot \theta sen \theta cos \theta + d^2 \dot \theta^2 sen^2 \theta \\
+\dot x^2 + \dot y^2 &= \dot d^2 + d^2\dot \theta^2
+\end{aligned}
+$$
+E aplicamos em T
+$$
+T = \frac{m}{2}(\dot d^2 + d^2 \dot \theta ^2)
+$$
+Verificamos em seguida que a energia potencial do sistema é a soma das contribuições da energia potencial gravitacional e da energia potencial elástica,
+$$
+V =-mgdcos\theta + \frac{k}{2}(d-l)^2
+$$
+A lagrangiana do sistema será,
+$$
+L = \frac{m}{2}(\dot d^2 + d^2 \dot \theta ^2) -
 $$
