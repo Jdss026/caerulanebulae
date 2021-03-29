@@ -2,7 +2,7 @@
 title: 'Resolução "Mecânica Analítica" - Capitulo 1'
 date: '2021-03-26'
 lastmod: '2021-03-28'
-tags: ['mecânica analítica','nivaldo-1.4','nivaldo-1.8','nivaldo-1.2','nivaldo-1.10','lagrangiana','resolução']
+tags: ['mecânica analítica','nivaldo-1.6','nivaldo-1.4','nivaldo-1.8','nivaldo-1.2','nivaldo-1.10','nivaldo-1.12','nivaldo-1.14','lagrangiana','resolução']
 draft: false
 summary: 'Resolução de problemas do capitulo 1 do livro "Mecânica Analítica" do Prof. Nivaldo Lemos'
 images: []
@@ -189,6 +189,97 @@ $$
 
 \boxed{T = 4\pi \sqrt{\frac{R}{g}}}
 $$
+# Problema 1.6
+
+Uma partícula cai verticalmente sob a ação da gravidade. supondo que a força da resistência do ar seja proporcional à velocidade, obtenha a equação de movimento a partícula com a ajuda da função dissipação $F=\frac{\lambda v^2}{2}$. Determine a velocidade como função do tempo e prove que a maior velocidade possível para a queda a partir do repouso é $v=\frac{mg}{\lambda}$ .
+
+
+
+## Resolução
+
+
+
+Primeiro iremos determinar a energia cinética do sistema, como estamos tratando apenas de um sistema unidimensional, a energia cinética terá apenas a velocidade em y.
+$$
+T=\frac{1}{2}m\dot y^2
+$$
+
+
+Para a energia cinética
+$$
+V=-mgy
+$$
+Como a laringiana é dada por:
+$$
+L=T-V \\
+$$
+
+$$
+L=\frac{1}{2}m\dot y^2+mgy
+$$
+
+Para encontrar as equações de movimento, poremos na equação de Lagrange. Mas para facilitar o processo faremos a derivada parcial para única coordenada generalizada.
+$$
+\frac{\partial L}{\partial \dot y}=m\dot y \Rightarrow\frac{d}{dt}\left(\frac{\partial L}{\partial \dot y}\right)=m\ddot y\\
+
+\frac{\partial L}{\partial  y}=mg\\
+\frac{\partial F}{\partial  y}=\lambda \dot y
+$$
+Para problemas a qual temos  dissipação, a equação de Lagrange é:
+$$
+\frac{d}{dt}\left(\frac{\partial L}{\partial \dot y}\right)-\frac{\partial L}{\partial  y}+\frac{\partial F}{\partial  y}=0
+$$
+substituindo:
+$$
+m\ddot y-mg+\lambda\dot y=0\\
+
+\ddot y+\frac{\lambda}{m}\dot y=g
+$$
+Resolvendo a EDO, obtemos $y(t)$
+$$
+y(t)=\frac{c_1m e^{-\frac{\lambda}{m}t}}{\lambda }+\frac{mg}{\lambda}t +c_2
+$$
+Impondo as condições iniciais ditas pelo problema, para encontrar as constantes.
+$$
+y(0)=0\\
+
+\dot y(0)=0
+$$
+
+$$
+y(0)=\frac{c_1m }{\lambda } +c_2=0\Rightarrow\frac{c_1m }{\lambda } +c_2=0\\
+
+\frac{c_1m }{\lambda }=c_2
+$$
+
+derivando para aplicar a segunda condição inicial
+$$
+\dot y(t)=c_1 e^{-\frac{\lambda}{m}t}+\frac{mg}{\lambda}\\
+$$
+impondo a condição inicial
+$$
+y(0)=c_1 +\frac{mg}{\lambda}=0\Rightarrow c_1 +\frac{mg}{\lambda}=0\\
+ c_1=- \frac{mg}{\lambda}
+$$
+substituindo na equação 13
+$$
+\frac{mg}{\lambda}\frac{m }{\lambda }=c_2\\
+
+c_2= \frac{m^2g}{\lambda^2}
+$$
+Agora para encontrar o resultado pedido pela equação, substituímos o valor da constante em $\dot y(t)$
+$$
+y(t)=- \frac{mg}{\lambda}\frac{m e^{-\frac{\lambda}{m}t}}{\lambda }+\frac{mg}{\lambda}t +\frac{m^2g}{\lambda^2}\\
+\dot y(t)=\frac{ m^2g}{\lambda^2}e^{-\frac{\lambda}{m}t}+\frac{mg}{\lambda}
+$$
+  para mostrar qual maior velocidade possível, faremos t tender ao infinito
+$$
+\lim_{t\rightarrow \infty}=\frac{mg}{\lambda}
+$$
+o que está de acordo com que foi pedido.
+
+
+
 # **Problema 1.8**
 
 O ponto de suspensão de um pêndulo de massa m e comprimento l pode mover-se horizontalmente ligado a duas molas idênticas de constante elástica k. (i) Escolhendo como coordenadas generalizadas o deslocamento x do ponto de suspensão e o ângulo $\theta$ entre o fio e a vertical, encontre a lagrangiana e as equações de movimento. (ii) Obtenha a forma aproximada das equações de Lagrange no caso de pequenas oscilações angulares ($sen \theta \approx\theta$, $cos \theta \approx 1$ e termos do tipo $\theta^n$ e $\dot\theta^n$ com n>1 são desprezíveis). Combinando as equações de movimento aproximadas, mostre que $x = \alpha\theta$ para um certo valor da constante $\alpha$. Mostre, em seguida, que o sistema equivale a um pendulo simples de comprimento $l'$ e exprima $l'$ em termos de l,m,g,k.
@@ -369,7 +460,7 @@ Um pêndulo elástico numa massa m capaz de oscilar num plano vertical suspensa 
 
 ## Resolução
 
-Descrevemos a origem no ponto de suporte do pêndulo, e direcionamos o par de eixos do sistema de referencia com o eixo-x para a direita e o eixo-y para baixo. Definimos as coordenadas generalizadas como d e $\theta$ , sendo d o comprimento da mola e $\theta $ o ângulo com a vertical. A particula de massa m é descrita pelo par (x,y), onde teremos a sua energia cinética e potencial da seguinte forma
+Descrevemos a origem no ponto de suporte do pêndulo, e direcionamos o par de eixos do sistema de referencia com o eixo-x para a direita e o eixo-y para baixo. Definimos as coordenadas generalizadas como d e $\theta$ , sendo d o comprimento da mola e $\theta $ o ângulo com a vertical. A partícula de massa m é descrita pelo par (x,y), onde teremos a sua energia cinética e potencial da seguinte forma
 $$
 T = \frac{1}{2}m(\dot x^2+\dot y^2) \\
 V = -mgdsen\theta \\
@@ -396,5 +487,196 @@ V =-mgdcos\theta + \frac{k}{2}(d-l)^2
 $$
 A lagrangiana do sistema será,
 $$
-L = \frac{m}{2}(\dot d^2 + d^2 \dot \theta ^2) -
+L = \frac{m}{2}(\dot d^2 + d^2 \dot \theta ^2) + mgdcos\theta - \frac{k}{2}(d-l)^2
 $$
+As equações de Lagrange para as coordenadas generalizadas escolhidas serão
+$$
+\begin{aligned}
+\frac{d}{dt}\left( \frac{\partial L}{\partial \dot d} \right) - \frac{\partial L}{\partial d} = 0\\
+
+\frac{d}{dt}\left( \frac{\partial L}{\partial \dot \theta} \right) - \frac{\partial L}{\partial \theta} = 0\\
+\end{aligned}
+$$
+Seguiremos resolvendo as derivadas parciais das equações
+$$
+\begin{aligned}
+
+\frac{\partial L}{\partial \dot{d}} &= m\dot d & \frac{\partial L}{\partial \dot \theta} &= d^2m\dot \theta\\
+
+\frac{\partial L}{\partial d} &= md\dot \theta^2 +mgcos \theta-k(d-l) & \frac{\partial L}{\partial \theta} &= -mgdsen \theta\\
+
+\frac{d}{dt}(m \dot d) &= m \ddot d & \frac{d}{dt}(d^2m\dot \theta) &= 2d\dot d m \dot \theta+d^2 m \ddot \theta \\  
+\end{aligned}
+$$
+as equações do movimento são
+$$
+\begin{aligned}
+
+m \ddot d - md \dot \theta^2 - mgcos \theta + k(d-l) &= 0 \\
+2d\dot d m \dot \theta+d^2 m \ddot \theta + mgdsen \theta &= 0
+
+\end{aligned}
+$$
+Dividindo ambos os membros da segunda equação por m:
+$$
+\begin{aligned}
+
+m \ddot d - md \dot \theta^2 - mgcos \theta + k(d-l) &= 0 \\
+2d\dot d \dot \theta+d^2 \ddot \theta + gd sen \theta &= 0
+
+\end{aligned}
+$$
+Para validar estas equações trataremos de um caso mais simples que é o caso do pêndulo simples (para pequenas oscilações) onde a mola tem $k \rightarrow \infty$. Dividindo por k,
+$$
+\begin{aligned}
+\frac{m}{k} \ddot d - \frac{m}{k}d \dot \theta^2 - \frac{m}{k}gcos \theta + (d-l) = 0\\
+\lim_{k \rightarrow \infty} \frac{m}{k} \ddot d - \frac{m}{k}d \dot \theta^2 - \frac{m}{k}gcos \theta + (d-l) =\lim_{k \rightarrow \infty} 0 \\
+
+d-l = 0 \Rightarrow d = l
+\end{aligned}
+$$
+do resultado anterior sabemos que $\dot d = 0$, daí
+$$
+\ddot \theta + \frac{g}{d}sen \theta = 0
+$$
+e a equação fica simplificada a equação do pêndulo simples.
+
+# Problema 1.12
+
+Um bloco de massa m desliza sem atrito ao longo de uma cunha de massa M e ângulo $\alpha$. A cunha, por sua vez, escorrega sem atrito sobre uma superfície horizontal. (i) Escolhendo coordenadas generalizadas convenientes, obtenha a lagrangiana e as equações de movimento do sistema. (ii) Determine a aceleração da cunha relativamente ao sistema de referência inercial (x,y). (iii) Determine a aceleração do bloco em relação à cunha.
+
+[IMAGEM 1.12]
+
+## Resolução
+
+Tomamos um referencial inercial Oxy à direita dos blocos e escolhemos como coordenadas generalizadas a distância do bloco de massa M à origem $d$ e a distância do bloco de massa m em relação ao bloco de massa M, $l$. As coordenadas $(X,Y) = (d+lcos\alpha, l sen \alpha)$ representam as coordenadas do bloco menor, usaremos elas em breve.
+
+ Determinamos a energia cinética do bloco maior como
+$$
+T_M = \frac{1}{2}M\dot d^2
+$$
+e a energia cinética e potencial do bloco menor
+$$
+T_m = \frac{1}{2}m(\dot X^2 + \dot Y^2)
+$$
+
+$$
+V_m = mglsen \alpha
+$$
+
+resolvemos a quantidade necessária para calcular a $T_m$:
+$$
+\begin{aligned}
+\dot X^2 + \dot Y^2 &= (\dot d + \dot l cos \alpha)^2 + (\dot l sen \alpha)^2 \\
+
+\dot X^2 + \dot Y^2 &= (\dot d^2 + 2\dot d \dot l cos \alpha + \dot l^2 cos^2\alpha)+(\dot l^2 sen^2 \alpha)\\
+
+\dot X^2 + \dot Y^2 &= \dot d^2 + 2\dot d \dot l cos \alpha +\dot l^2\\
+
+\end{aligned}
+$$
+Aplicamos os valores encontrados na lagrangiana
+
+
+$$
+\begin{aligned}
+L &= T - V \\
+
+L &= \frac{1}{2}M \dot d^2 +\frac{1}{2}m\left(\dot d^2 + 2\dot d \dot l cos \alpha +\dot l^2\right)-mglsen \alpha\\
+
+L &= \frac{1}{2} \dot d^2 \left(M+m\right)+\frac{1}{2}m\left(  2\dot d \dot l cos \alpha +\dot l^2\right)-mglsen \alpha\\
+\end{aligned}
+$$
+Agora escreveremos a equação de Lagrange, mas antes disso para facilitar, faremos as derivada parciais. 
+$$
+\begin{aligned}
+
+\frac{\partial L}{\partial \dot{l}} &= m\left(\dot l+\dot dcos\alpha\right) & \frac{\partial L}{\partial l} &= -mgsen\alpha\\
+
+\frac{\partial L}{\partial \dot{d}} &= \dot d(M+m)+m\dot l cos \alpha & \frac{\partial L}{\partial d} &= 0 \\
+
+\frac{d}{dt}(m\left(\dot l+\dot dcos\alpha\right)) &=   m\left(\ddot l+\ddot dcos\alpha\right) & \frac{d}{dt}(\dot d(M+m)+m\dot l cos \alpha) &= \ddot d(M+m)+m\ddot l cos \alpha
+\end{aligned}
+$$
+As equações de movimento são dadas por
+$$
+\begin{aligned}
+m(\ddot l + \ddot d cos \alpha) + mg sen \alpha = 0 \\
+
+\ddot d(M+m)+m\ddot l cos \alpha=0
+\end{aligned}
+$$
+ 
+
+
+
+# Problema 1.14
+
+Prove que a lagrangiana de Bateman (1931)
+$$
+L=e^{\lambda t}\left( \frac{m}{2}\dot x^2-\frac{\omega ^2m}{2} x^2\right)
+$$
+gera a equação de movimento de um oscilador harmônico amortecido. Mostre que a transformação de ponto $q=e^{\frac{\lambda t}{2}}x$  elimina a dependência temporal explicita na lagrangiana.
+
+
+
+## Resolução
+
+O que primeiro faremos será aplicar a equação de Lagrange para a equação acima, fazendo as derivadas parciais separadamente para facilitar os cálculos. 
+$$
+\frac{\partial L}{\partial \dot x}=e^{\lambda t}(m\dot x)  \\
+
+\frac{\partial L}{\partial  x}=e^{\lambda t}(m\omega^2 x) \\
+
+\frac{d}{dt}\left(\frac{\partial L}{\partial \dot x}\right)=me^{\lambda t}\left(\lambda \dot x+\ddot x\right)
+$$
+substituindo que foi encontrado na equação de Lagrange.
+
+
+$$
+\frac{d}{dt}\left(\frac{\partial L}{\partial \dot x}\right)-\frac{\partial L}{\partial  x}=0\\
+me^{\lambda t}\left(\lambda \dot x+\ddot x\right)-e^{\lambda t}(m\omega^2 x) \\
+$$
+organizando um pouco mais
+$$
+me^{\lambda t}\left(\ddot x +\lambda\dot x+\omega^2x\right)=0
+$$
+sabemos que $me^{\lambda t}>0, \forall t$, portanto temos que:
+$$
+\ddot x +\lambda\dot x+\omega^2x=0
+$$
+que é a equação de movimento de um oscilador harmônico amortecido. Pondo de outra forma, com $\omega^2=\frac{k}{m}, \lambda=\frac{\rho}{m} $ e multiplicando por m.
+$$
+m\ddot x +m\lambda\dot x+m\omega^2x=0\\
+
+m\ddot x +m\frac{\rho}{m}\dot x+m\frac{k}{m}x=0\\
+
+\boxed {m\ddot x +\rho\dot x+kx=0}
+$$
+que também é uma forma para oscilador harmônico amortecido. Agora eliminaremos a dependência temporal através da equação.
+$$
+q=e^{\frac{\lambda t}{2}}x
+$$
+ derivando a equação para fazer substituições:
+$$
+\dot q=\frac{\lambda }{2}e^{\frac{\lambda t}{2}}x+ e^{\frac{\lambda t}{2}}\dot x\\
+
+ \dot q=\frac{\lambda }{2}q+ e^{\frac{\lambda t}{2}}\dot x\\
+ 
+ \dot x=\frac{\dot q-\frac{\lambda }{2}q}{e^{\frac{\lambda t}{2}}}
+$$
+
+$$
+x=\frac{q}{e^{\frac{\lambda t}{2}}}
+$$
+
+pondo o que foi encontrado na lagrangiana
+$$
+L=e^{\lambda t}\left( \frac{m}{2}\dot x^2-\frac{\omega ^2m}{2} x^2\right)\\
+
+L=e^{\lambda t}\left( \frac{m}{2}\left(\frac{\dot q-\frac{\lambda }{2}q}{e^{\frac{\lambda t}{2}}}\right)^2-\frac{m\omega ^2}{2} \left(\frac{q}{e^{\frac{\lambda t}{2}}}\right)^2\right)\\
+
+L=\frac{m}{2}\left({\dot q-\frac{\lambda }{2}q}\right)^2
+-\frac{m\omega ^2}{2}q^2=\frac{m}{2}\left(\left(\dot q-\frac{\lambda }{2}q\right)^2-\omega^2q^2\right)
+$$
+o que elimina a dependência no tempo. 
