@@ -35,10 +35,8 @@ export default function About() {
           </div>
           <div className="pt-8 pb-8 prose dark:prose-dark max-w-none xl:col-span-2">
             <p>
-              Aspirante a físico, procrastinador nas horas vagas e por este motivo você vai ler dolor sit amet, 
-              consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu.
-               Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus 
-              tempus vulputate.
+              Ludovicense, aspirante a físico e desenvolvedor nas horas vagas. 5° Período de Física na Universidade Federal do Maranhão
+              (UFMA). Iniciação cientifíca na área de Teoria Quântica e Protocolos de Informação Quântica. Contato: jdss@gmail.com.
             </p>
           </div>
         </div>
